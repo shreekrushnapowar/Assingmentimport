@@ -7,7 +7,7 @@ router.post('/Getdata', async (req, res) => {
        const users=[];
          for(let i = 0; i < mydata.length; i++)
           {   let obj = mydata[i];
-              if(obj.LogLevel=='error')
+              if(obj.LogLevel=='error' || obj.LogLevel=='warn' )
               {
                  users.push(obj);
               }
